@@ -1,0 +1,109 @@
+import 'package:flutter/material.dart';
+import 'package:adobe_xd/page_link.dart';
+import './Allez.dart';
+import './Conseil.dart';
+import './Pyramide.dart';
+
+class Repas extends StatelessWidget {
+  Repas({
+    Key key,
+  }) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xffffffff),
+      body: ListView(
+        children: <Widget>[
+         GestureDetector(
+  onTap: () {
+    Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Allez()),
+            );
+  },
+            child:
+                // Adobe XD layer: '0' (shape)
+                Container(
+              width: 375.0,
+              height: 35.0,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: const AssetImage('assets/images/10.png'),
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ),
+          ),
+          Transform.translate(
+            offset: Offset(0.0, 0.0),
+            child: Container(
+              width: 375.0,
+              height: 150.0,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: const AssetImage('assets/images/27.png'),
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ),
+          ),
+          Transform.translate(
+            offset: Offset(0.0, 0.0),
+            child: GestureDetector(
+  onTap: () {
+    Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Conseil()),
+            );
+  },
+              child: Container(
+                width: 375.0,
+                height: 127.0,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: const AssetImage('assets/images/28.png'),
+                    fit: BoxFit.fill,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Transform.translate(
+            offset: Offset(0.0, 0.0),
+            child: GestureDetector(
+  onTap: () {
+    Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Pyramide()),
+            );
+  },
+              child: Container(
+                width: 375.0,
+                height: 127.0,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: const AssetImage('assets/images/29.png'),
+                    fit: BoxFit.fill,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Transform.translate(
+            offset: Offset(0.0, 0.0),
+            child: Container(
+              width: 375.0,
+              height: 222.0,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: const AssetImage('assets/images/30.png'),
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
